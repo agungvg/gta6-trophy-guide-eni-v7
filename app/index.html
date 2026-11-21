@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vice Atlas — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true">VA</div>
+    <div>
+      <h1>Vice Atlas</h1>
+      <p class="tagline">GTA VI Trophy Guide &amp; Tracker — all 55 PlayStation 5 trophies, cited, step by step.</p>
+    </div>
+  </div>
+  <div class="progress-block">
+    <div class="progress-num"><span id="earnedCount">0</span><span class="of">/55 earned</span></div>
+    <div class="progress-bar"><div id="progressFill"></div></div>
+    <p class="progress-grades" id="gradeBreakdown">1 Platinum · 2 Gold · 6 Silver · 46 Bronze</p>
+  </div>
+</header>
+
+<section class="audit" id="auditBar" aria-label="Audit — numbers computed live from the guide data">
+  <p class="audit-loading">Computing audit numbers from the guide data…</p>
+</section>
+
+<nav class="tabs" aria-label="Guide sections">
+  <a href="#tracker" data-tab="tracker">Tracker</a>
+  <a href="#roadmap" data-tab="roadmap">Roadmap</a>
+  <a href="#missables" data-tab="missables">Missables</a>
+  <a href="#sources" data-tab="sources">Sources</a>
+</nav>
+
+<main>
+  <section id="view-tracker" class="view">
+    <div class="tracker-tools">
+      <div class="filters" id="kindFilters" role="group" aria-label="Filter by kind"></div>
+      <div class="filters" id="gradeFilters" role="group" aria-label="Filter by grade"></div>
+      <label class="search">Search <input id="searchBox" type="search" placeholder="Trophy or mission name…" autocomplete="off"></label>
+      <label class="spoiler"><input id="spoilerToggle" type="checkbox"> Spoiler shield — hide story trophy names until earned</label>
+      <div class="io">
+        <button id="exportBtn" type="button">Export progress</button>
+        <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json"></label>
+        <span class="saved-note">Saved in this browser</span>
+      </div>
+    </div>
+    <div class="tracker-layout">
+      <div class="trophy-list" id="trophyList"></div>
+      <aside class="detail" id="trophyDetail" aria-label="Selected trophy guide"></aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <h2>Roadmap to the platinum</h2>
+    <div class="chips" id="roadmapChips"></div>
+    <div class="callout" id="hoursNote"></div>
+    <div class="stages" id="roadmapStages"></div>
+    <aside class="watch" id="roadmapWatch"></aside>
+  </section>
+
+  <section id="view-missables" class="view" hidden>
+    <h2>Missables — last-chance guide</h2>
+    <p class="lede">Only one trophy can be missed. Everything else stays available in free roam after the story. The table below flags every trophy as <strong>possibly missable</strong>, <strong>at risk</strong> or <strong>safe at any time</strong>.</p>
+    <table class="matrix" id="missableTable">
+      <thead><tr><th>Flag</th><th>Trophy</th><th>Last chance</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <h3>Story gates, chapter by chapter</h3>
+    <div class="gates" id="storyGates"></div>
+  </section>
+
+  <section id="view-sources" class="view" hidden>
+    <h2>Sources</h2>
+    <p class="lede">Every fact in this guide cites one of these pages, all read on 21 Nov 2026. Source [1] is the official list. No other page is cited anywhere in the guide.</p>
+    <div class="stat-cards" id="sourceStats"></div>
+    <ol class="source-list" id="sourceList"></ol>
+    <h3>Trophy × source claims matrix</h3>
+    <p class="lede">Each cell counts how many cited steps of that trophy come from that source. A blank cell means the source says nothing about that trophy here.</p>
+    <div class="matrix-wrap"><table class="matrix heat" id="claimsMatrix"></table></div>
+  </section>
+</main>
+
+<footer>
+  <p>Vice Atlas — an unofficial fan guide. Grand Theft Auto and GTA are trademarks of Take-Two Interactive; this guide is not affiliated with or endorsed by Rockstar Games. Trophy names and descriptions are shown as PlayStation publishes them; all guide text is written for this entry in its own words. Works fully offline — no network requests at run time.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
